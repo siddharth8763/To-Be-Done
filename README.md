@@ -1,8 +1,8 @@
-###Getting Started with To Be Done APP
+###`Getting Started with To Be Done APP`
 
 This Project was created with Typescript, React, SCSS, MUI. 
 
-###To Use the Codebase
+###`To Use the Codebase`
 
 To use this app clone it on the local by the command git clone "https://github.com/siddharth8763/To-Be-Done.git".
 Remember to use the master branch for cloning
