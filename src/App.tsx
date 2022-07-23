@@ -1,11 +1,11 @@
 import Header from "./Components/Header/Header"
 
 
-function App() {
+const App:React.FC=()=> {
   return (
-    <div className="App">
+    <>
       <Header/>
-    </div>
+    </>
   );
 }
 

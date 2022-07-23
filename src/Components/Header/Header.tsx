@@ -1,10 +1,13 @@
+import React from "react"
+import Inputfield from "../Inputfield/Inputfield"
 import classes from "./Header.module.scss"
 
-function Header() {
+const Header:React.FC=()=> {
   return (
     <>
         <div className={`${classes.headerContainer}`}>
-            <h1 className={`${classes.header}`}>To Be Done 📃📃</h1>
+            <span className={`${classes.header}`}>To Be Done 📃📃</span>
+            <Inputfield/>
         </div>
     </>
   )
