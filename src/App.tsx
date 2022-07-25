@@ -1,12 +1,11 @@
-import Header from "./Components/Header/Header"
+import Header from "./Components/Header/Header";
 
-
-const App:React.FC=()=> {
+const App: React.FC = () => {
   return (
     <>
-      <Header/>
+      <Header />
     </>
   );
-}
+};
 
 export default App;
