@@ -1,6 +1,43 @@
-.listItemContainer{
+.listItemContainer {
     display: flex;
-    justify-content: space-evenly;
-    width: 90%;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 95%;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+.toDoCard {
+    display: flex;
+    width: 47.5%;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: rgb(50, 195, 205);
+}
+
+.completed {
+    background-color: green;
+}
+
+@media (max-width: 1100px) {
+    .toDoCard {
+        width: 45%;
+    }
+}
+
+@media (max-width: 700px) {
+    .toDoCard {
+        width: 85%;
+        margin-bottom: 10px;
+    }
+
+    .listItemContainer {
+        width: 81%;
+        flex-direction: column;
+    }
+}
+
+.toDoHeading {
+    font-size: 30px;
+    color: white;
 }
