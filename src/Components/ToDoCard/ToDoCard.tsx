@@ -44,8 +44,6 @@ const ToDoCard: React.FC<ToDoCardTypes> = ({
     inputRef.current?.focus();
   }, [editState]);
 
-  console.log(editToDo);
-
   return (
     <Draggable draggableId={todos.id.toString()} index={index}>
       {(provided) => (
