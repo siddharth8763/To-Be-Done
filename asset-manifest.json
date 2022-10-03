@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/github.io/To-Be-Done/static/css/main.a2606c4f.css",
+    "main.js": "/github.io/To-Be-Done/static/js/main.5955aaa7.js",
+    "index.html": "/github.io/To-Be-Done/index.html",
+    "main.a2606c4f.css.map": "/github.io/To-Be-Done/static/css/main.a2606c4f.css.map",
+    "main.5955aaa7.js.map": "/github.io/To-Be-Done/static/js/main.5955aaa7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a2606c4f.css",
+    "static/js/main.5955aaa7.js"
+  ]
+}
