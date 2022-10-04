@@ -9,7 +9,7 @@ const Header: React.FC = () => {
   const [toDo, setToDo] = useState<string>("");
 
   //Getting Data From Local Storage
-  const getDataFromLocalStorage = (): ToDoProperties[] => {
+  const getACtiveDataFromLocalStorage = (): ToDoProperties[] => {
     const data = localStorage.getItem("toDoLists");
     if (data) {
       return JSON.parse(data);
@@ -20,7 +20,7 @@ const Header: React.FC = () => {
 
   //ToDoProperties is the interface containing all the properties for toDoList
   const [toDoList, setToDoList] = useState<ToDoProperties[]>(
-    getDataFromLocalStorage()
+    getACtiveDataFromLocalStorage()
   );
 
   //Setting Data to localstorage
@@ -28,8 +28,23 @@ const Header: React.FC = () => {
     localStorage.setItem("toDoLists", JSON.stringify(toDoList));
   }, [toDoList]);
 
+  const getCompletedDataFromLocalStorage = (): ToDoProperties[] => {
+    const completedata = localStorage.getItem("completedToDoList");
+    if (completedata) {
+      return JSON.parse(completedata);
+    } else {
+      return [];
+    }
+  };
+
   // state variables to keep track of completed and not completed
-  const [completedTasks, setCompletedTasks] = useState<ToDoProperties[]>([]);
+  const [completedTasks, setCompletedTasks] = useState<ToDoProperties[]>(
+    getCompletedDataFromLocalStorage()
+  );
+
+  useEffect(() => {
+    localStorage.setItem("completedToDoList", JSON.stringify(completedTasks));
+  }, [completedTasks]);
 
   const handletoDoList = (e: React.FormEvent): void => {
     e.preventDefault();
