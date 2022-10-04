@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Inputfield from "../Inputfield/Inputfield";
 import ListItems from "../ListItems/ListItems";
 import classes from "./Header.module.scss";
@@ -7,10 +7,26 @@ import { DragDropContext, DropResult } from "react-beautiful-dnd";
 
 const Header: React.FC = () => {
   const [toDo, setToDo] = useState<string>("");
-  {
-    /*ToDoProperties is the interface containing all the properties for toDoList*/
-  }
-  const [toDoList, setToDoList] = useState<ToDoProperties[]>([]);
+
+  //Getting Data From Local Storage
+  const getDataFromLocalStorage = (): ToDoProperties[] => {
+    const data = localStorage.getItem("toDoLists");
+    if (data) {
+      return JSON.parse(data);
+    } else {
+      return [];
+    }
+  };
+
+  //ToDoProperties is the interface containing all the properties for toDoList
+  const [toDoList, setToDoList] = useState<ToDoProperties[]>(
+    getDataFromLocalStorage()
+  );
+
+  //Setting Data to localstorage
+  useEffect(() => {
+    localStorage.setItem("toDoLists", JSON.stringify(toDoList));
+  }, [toDoList]);
 
   // state variables to keep track of completed and not completed
   const [completedTasks, setCompletedTasks] = useState<ToDoProperties[]>([]);
@@ -28,9 +44,8 @@ const Header: React.FC = () => {
           isDone: false,
         },
       ]);
-      {
-        /*After adding the thing to todolist we make sure to mark the field as empty*/
-      }
+
+      //After adding the thing to todolist we make sure to mark the field as empty
       setToDo("");
     }
   };
