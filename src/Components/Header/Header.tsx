@@ -24,9 +24,9 @@ const Header: React.FC = () => {
   );
 
   //Setting Data to localstorage
-  // useEffect(() => {
-  //   localStorage.setItem("toDoLists", JSON.stringify(toDoList));
-  // }, [toDoList]);
+  useEffect(() => {
+    localStorage.setItem("toDoLists", JSON.stringify(toDoList));
+  }, [toDoList]);
 
   const getCompletedDataFromLocalStorage = (): ToDoProperties[] => {
     const completedata = localStorage.getItem("completedToDoList");
@@ -42,9 +42,9 @@ const Header: React.FC = () => {
     getCompletedDataFromLocalStorage()
   );
 
-  // useEffect(() => {
-  //   localStorage.setItem("completedToDoList", JSON.stringify(completedTasks));
-  // }, [completedTasks]);
+  useEffect(() => {
+    localStorage.setItem("completedToDoList", JSON.stringify(completedTasks));
+  }, [completedTasks]);
 
   const handletoDoList = (e: React.FormEvent): void => {
     e.preventDefault();
@@ -95,6 +95,7 @@ const Header: React.FC = () => {
       complete.splice(destination.index, 0, add);
     }
     setToDoList(active);
+    localStorage.setItem("toDoLists", JSON.stringify(active));
     let crossedResult = complete.map((val) => {
       if (val.isDone === false) {
         return { ...val, isDone: !val.isDone };
@@ -102,9 +103,7 @@ const Header: React.FC = () => {
       return val;
     });
     setCompletedTasks(crossedResult);
-
-    console.log("toDoLists", toDoList);
-    console.log("completed", crossedResult);
+    localStorage.setItem("completedToDoList", JSON.stringify(completedTasks));
   };
 
   return (
