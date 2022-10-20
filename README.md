@@ -1,6 +1,8 @@
+###`Access the app through this link https://siddharth8763.github.io/To-Be-Done/`
+
 ###`Getting Started with To Be Done APP`
 
-This Project was created with Typescript, React, SCSS, MUI. 
+This Project was created with Typescript, React, SCSS, MUI.
 
 ###`To Use the Codebase`
 
