@@ -1,4 +1,6 @@
-###`Access the app through this link "https://siddharth8763.github.io/To-Be-Done/"`
+###`How to Access the App`
+Click on the link to proceed "https://siddharth8763.github.io/To-Be-Done/"
+
 
 ###`Getting Started with To Be Done APP`
 
