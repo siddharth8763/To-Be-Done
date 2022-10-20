@@ -49,7 +49,7 @@ const ToDoCard: React.FC<ToDoCardTypes> = ({
       {(provided) => (
         <>
           <form
-            className={`${classes.tdcfromContainer}`}
+            className={`col-sm-7 ${classes.tdcfromContainer}`}
             onSubmit={(e) => handleEdit(e, todos.id)}
             {...provided.draggableProps}
             {...provided.dragHandleProps}

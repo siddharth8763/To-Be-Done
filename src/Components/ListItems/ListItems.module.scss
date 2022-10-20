@@ -1,7 +1,8 @@
 .listItemContainer {
     display: flex;
     justify-content: space-between;
-    width: 95%;
+    width: 88%;
+    column-gap: 10px;
     align-items: flex-start;
     margin-top: 10px;
 }
