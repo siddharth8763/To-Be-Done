@@ -5,7 +5,7 @@ Click on the link to proceed "https://siddharth8763.github.io/To-Be-Done/"
 
 ###`Getting Started with To Be Done APP`
 
-This Project was created with Typescript, React, SCSS, MUI.
+This Project was created with Typescript, React, SCSS, MUI, Bootstrap.
 
 ###`To Use the Codebase`
 
